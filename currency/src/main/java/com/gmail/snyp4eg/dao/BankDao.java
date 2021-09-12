@@ -15,7 +15,7 @@ import com.gmail.snyp4eg.reader.PropertyReader;
 import com.gmail.snyp4eg.util.BankMapper;
 
 @Component
-public class BankDao implements GenericDao<Bank> {
+public class BankDao implements GenericDao<Bank, Integer> {
     private static final Logger logger = LoggerFactory.getLogger(BankDao.class);
     private static final String GET_BY_ID_KEY = "banks.get-by-id";
     private static final String GET_ALL_KEY = "banks.get-all";

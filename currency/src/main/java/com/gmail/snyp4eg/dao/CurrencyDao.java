@@ -15,7 +15,7 @@ import com.gmail.snyp4eg.reader.PropertyReader;
 import com.gmail.snyp4eg.util.CurrencyMapper;
 
 @Component
-public class CurrencyDao implements GenericDao<Currency>{
+public class CurrencyDao implements GenericDao<Currency, Integer>{
     private static final Logger logger = LoggerFactory.getLogger(BankDao.class);
     private static final String GET_BY_ID_KEY = "currency.get-by-id";
     private static final String GET_ALL_KEY = "currency.get-all";

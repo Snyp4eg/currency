@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.RowMapper;
 import com.gmail.snyp4eg.model.Operation;
 
 public class OperationMapper implements RowMapper<Operation> {
-    private static final String OPERATION_ID = "operation_id";
+    private static final String OPERATION_ID = "operations_id";
     private static final String BUY_PRICE = "buy_price";
     private static final String SELL_PRICE = "sell_price";
 

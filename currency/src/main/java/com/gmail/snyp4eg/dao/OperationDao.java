@@ -32,7 +32,7 @@ public class OperationDao implements OperationsExtendedDao {
     }
 
     @Override
-    public Operation getById(Integer id) {
+    public Operation getById(String id) {
 	Operation operation;
 	try {
 	    operation = jdbcTemplate.queryForObject(queryReader.read(GET_BY_ID_KEY), new OperationMapper(), id);
