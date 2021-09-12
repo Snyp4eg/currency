@@ -25,7 +25,7 @@ public class Bank {
     }
 
     public void setBankName(String bankName) {
-	this.bankName = bankName;
+	this.bankName = bankName.toUpperCase();
     }
     
     @Override
