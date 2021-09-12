@@ -44,9 +44,9 @@ public class BankDaoTest {
 
     @Test
     void shouldReturnExpectedBankListThenGetAllCalled() {
-	Bank bankOne = new Bank(000000, "NBU");
-	Bank bankTwo = new Bank(305299, "PRIVATBANK");
-	Bank bankThree = new Bank(322001, "MONOBANK");
+	Bank bankOne = new Bank(305299, "PRIVATBANK");
+	Bank bankTwo = new Bank(322001, "MONOBANK");
+	Bank bankThree = new Bank(999999, "NBU");
 	List<Bank> expectedBanksList = new ArrayList<>();
 	expectedBanksList.add(bankOne);
 	expectedBanksList.add(bankTwo);
@@ -63,9 +63,9 @@ public class BankDaoTest {
 
     @Test
     void shouldUpdateExistDataThenUpdateBankCalled() {
-	Bank updateBank = new Bank(000000, "NATIONAL BANK OF UKRAINE");
+	Bank updateBank = new Bank(999999, "NATIONAL BANK OF UKRAINE");
 	testBankDao.update(updateBank);
-	assertEquals(testBankDao.getById(000000), updateBank);
+	assertEquals(testBankDao.getById(999999), updateBank);
     }
 
     @Test

@@ -16,7 +16,7 @@ import com.gmail.snyp4eg.util.OperationMapper;
 
 @Component
 public class OperationDao implements OperationsExtendedDao {
-    private static final Logger logger = LoggerFactory.getLogger(BankDao.class);
+    private static final Logger logger = LoggerFactory.getLogger(OperationDao.class);
     private static final String GET_BY_ID_KEY = "operations.get-by-id";
     private static final String GET_ALL_KEY = "operations.get-all";
     private static final String INSERT_KEY = "operations.insert";
@@ -50,15 +50,13 @@ public class OperationDao implements OperationsExtendedDao {
 
     @Override
     public void insert(Operation operation) {
-	jdbcTemplate.update(queryReader.read(INSERT_KEY), operation.getOperationId(), operation.getBankId(),
-		operation.getCurrencyId(), operation.getOperationTime(), operation.getBuyPrice(),
+	jdbcTemplate.update(queryReader.read(INSERT_KEY), operation.getOperationId(), operation.getBuyPrice(),
 		operation.getSellPrice());
     }
 
     @Override
     public void update(Operation operation) {
-	jdbcTemplate.update(queryReader.read(UPDATE_KEY), operation.getBankId(),
-		operation.getCurrencyId(), operation.getOperationTime(), operation.getBuyPrice(),
+	jdbcTemplate.update(queryReader.read(UPDATE_KEY), operation.getBuyPrice(),
 		operation.getSellPrice(), operation.getOperationId());
 	}
 
